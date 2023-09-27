@@ -1,5 +1,5 @@
 {
-    "id": "com.github.ericzzh.mattermost-plugin-oryauth",
+    "id": "com.mattermost.plugin-oryauth",
     "name": "Ory Authentication",
     "description": "Integrate Mattermost as a SSO login endpoint with Ory Hydra OAuth server",
     "homepage_url": "https://github.com/ericzzh/mattermost-plugin-oryauth",
@@ -10,7 +10,11 @@
     "min_server_version": "5.37.0",
     "server": {
         "executables": {
-            "darwin-amd64": "server/dist/plugin-darwin-amd64"
+            "linux-amd64": "server/dist/plugin-linux-amd64",
+            "linux-arm64": "server/dist/plugin-linux-arm64",
+            "darwin-amd64": "server/dist/plugin-darwin-amd64",
+            "darwin-arm64": "server/dist/plugin-darwin-arm64",
+            "windows-amd64": "server/dist/plugin-windows-amd64.exe"
         }
     },
     "webapp": {
@@ -19,15 +23,6 @@
     "settings_schema": {
         "header": "",
         "footer": "",
-        "settings": [
-           {
-             "key": "OryHydraAdminEndPoint",
-             "display_name": "Ory Hydra Admin Endpoint Url",
-             "type": "text",
-             "help_text": "Ory Hydra Admin Endpoint Url",
-             "placeholder": "",
-             "default": ""
-           } 
-        ]
+        "settings": []
     }
 }
